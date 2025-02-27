@@ -19,7 +19,7 @@ def find_columns_with_few_values(dataframe,threshold):
     return few_values_columns
 
 def drop_and_fill(dataframe):
-    cols_to_drop = dataframe.columns[dataframe.isnull().sum()]
+    cols_to_drop = dataframe.columns[dataframe.isnull().mean()>0.5]
     dataframe = dataframe.drop(cols_to_drop,axis = 1)
     dataframe = dataframe.fillna(dataframe.mean())
     return dataframe

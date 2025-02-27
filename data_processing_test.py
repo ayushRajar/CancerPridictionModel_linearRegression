@@ -14,7 +14,7 @@ constant_columns = find_constant_columns(df)
 print("Columns that contains a sngle value: ",constant_columns)
 columns_with_few_values = find_columns_with_few_values(df,10)
 
-df["binnedinc"][0]
+df["binnedInc"][0]
 df = bin_to_num(df)
 
 df = cat_to_col(df)
