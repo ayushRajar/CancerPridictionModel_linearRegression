@@ -6,6 +6,6 @@ class IngestData:
     
     def get_data(self,data_path: str)->pd.DataFrame :
         self.data_path = data_path
-        df = pd.read_csv(self.data_path)
+        df = pd.read_csv(self.data_path,encoding="latin")
         return df;
 
